@@ -1,0 +1,56 @@
+@use "variables" as *;
+@use "media-queries" as *;
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-SemiBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: $font-size;
+}
+
+.heading-primary {
+    font-size: clamp(29px, 3.9vw, 49px);
+    color: #fff;
+    line-height: 1.25;
+    
+    @include tablet {
+        line-height: 1.12;
+    }
+}
+
+.paragraph {
+    color: #fff;
+    margin-top: 22px;
+    line-height: 1.63;
+
+    @include tablet {
+        margin-top: 28px;
+    }
+}
+
+input, button {
+    font-family: "Poppins", sans-serif;
+}

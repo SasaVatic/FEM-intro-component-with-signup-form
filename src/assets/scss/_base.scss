@@ -1,0 +1,24 @@
+@use "variables" as *;
+@use "media-queries" as *;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    background: url("../images/bg-intro-mobile.png"), $red;
+    background-position: center top;
+    user-select: none;
+    min-height: 100vh;
+    text-align: center;
+    
+    @include tablet {
+        background: url("../images/bg-intro-desktop.png"), $red;
+        background-position: center top;
+    }
+}

@@ -1,0 +1,100 @@
+@use "variables" as *;
+@use "media-queries" as *;
+
+.form {
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: $box-shadow-dark;
+
+    @include tablet {
+        padding: 7.4%;
+    }
+
+    &__group {
+        position: relative;
+
+        &:not(:first-child) {
+            margin-top: 16px;
+
+            @include tablet {
+                margin-top: 4.4%;
+            }
+        }
+    }
+
+    &__error-img {
+        display: none;
+        position: absolute;
+        top: 50%;
+        right: 5.8%;
+        transform: translateY(-50%);
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__validation-msg {
+        display: none;
+        font-size: 11px;
+        font-weight: $medium;
+        text-align: end;
+        font-style: italic;
+        color: $red;
+        margin-top: 4px;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__input {
+        display: block;
+        font-size: 14px;
+        font-weight: $semi-bold;
+        color: $dark-blue;
+        width: 100%;
+        padding: 16px 51px 16px 18px;
+        border: 1px solid rgba($color: $grayish-blue, $alpha: 0.5);
+        border-radius: 5px;
+
+        &:focus {
+            outline: 1px solid $dark-blue;
+        }
+
+        &.invalid {
+            outline: 2px solid $red;
+        }
+
+        &::placeholder {
+            font-family: inherit;
+            font-size: 14.2px;
+            font-weight: $semi-bold;
+            color: darken($dark-blue, 100%);
+        }
+
+        @include tablet {
+            padding: 16px 61px 16px 31px;
+        }
+    }
+
+    &__legal {
+        font-size: 11px;
+        line-height: 1.9;
+        text-align: center;
+        color: $grayish-blue;
+        margin-top: 9px;
+        padding: 0 20px;
+        
+        &--highlight {
+            text-decoration: none;
+            color: $red;
+            font-weight: $bold;
+        }
+        
+        @include tablet {
+            margin-top: 11px;
+        }
+    }
+}
